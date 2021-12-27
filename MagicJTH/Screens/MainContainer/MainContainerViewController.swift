@@ -12,11 +12,16 @@ class MainContainerViewController: NiblessViewController {
     // MARK: - Propiedades
     
     private let viewModel: MainContainerViewModel
+    private let welcomeViewController: WelcomeViewController
     
     // MARK: - Constructor
     
-    init(viewModel: MainContainerViewModel) {
+    init(
+        viewModel: MainContainerViewModel,
+        welcomeViewController: WelcomeViewController
+    ) {
         self.viewModel = viewModel
+        self.welcomeViewController = welcomeViewController
         
         super.init()
     }

@@ -15,12 +15,28 @@ class AppDependencyContainer {
     /// Creación del view controller que actúa como contenedor principal de vistas.
     func makeMainContainerViewController() -> MainContainerViewController {
         let mainContainerViewModel = makeMainContainerViewModel()
-        return MainContainerViewController(viewModel: mainContainerViewModel)
+        let welcomeViewController = makeWelcomeViewController()
+        
+        return MainContainerViewController(
+            viewModel: mainContainerViewModel,
+            welcomeViewController: welcomeViewController
+        )
     }
     
     /// Creación de un view model para el view controller que actúa como contenedor principal de vistas.
     private func makeMainContainerViewModel() -> MainContainerViewModel {
         MainContainerViewModel()
+    }
+    
+    // MARK: Welcome
+    
+    private func makeWelcomeViewController() -> WelcomeViewController {
+        let viewModel = makeWelcomeViewModel()
+        return WelcomeViewController(viewModel: viewModel)
+    }
+    
+    private func makeWelcomeViewModel() -> WelcomeViewModel {
+        WelcomeViewModel()
     }
     
 }
