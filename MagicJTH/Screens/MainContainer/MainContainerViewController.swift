@@ -43,10 +43,10 @@ class MainContainerViewController: NiblessViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        observeViewModel()
+        observeNavigation()
     }
     
-    func observeViewModel() {
+    func observeNavigation() {
         viewModel.$navigation
             .receive(on: DispatchQueue.main)
             .sink { [weak self] screen in
@@ -74,7 +74,8 @@ class MainContainerViewController: NiblessViewController {
         cardsListViewController = makeCardsListViewController()
         
         if cardsListViewController != nil {
-            addFullScreen(childViewController: cardsListViewController!)
+            let navigationController = NiblessNavigationController(viewController: cardsListViewController!)
+            addFullScreen(childViewController: navigationController)
         }
     }
     

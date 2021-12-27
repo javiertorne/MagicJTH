@@ -24,7 +24,19 @@ class CardsListViewController: NiblessViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigationBar()
         viewModel.fetchAllCards()
+    }
+    
+    // MARK: - Métodos
+    
+    override func loadView() {
+        view = CardsListView(viewModel: viewModel)
+    }
+    
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "cards_list.title.text".localized()
     }
     
 }
