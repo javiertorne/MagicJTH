@@ -23,7 +23,7 @@ class WelcomeViewController: NiblessViewController {
     // MARK: - Métodos
     
     override func loadView() {
-        view = WelcomeView()
+        view = WelcomeView(viewModel: viewModel)
     }
     
 }
