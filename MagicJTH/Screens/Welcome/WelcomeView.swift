@@ -43,7 +43,7 @@ class WelcomeView: ViewForViewController {
     
     private let dateLabel: UILabel = {
         let label = UILabel()
-        label.text = "Prueba realizada el 27/12/2021"
+        label.text = "welcome.date_label.text".localized()
         label.textAlignment = .center
         return label
     }()
@@ -51,7 +51,7 @@ class WelcomeView: ViewForViewController {
     private lazy var accessButton: UIButton = {
         let button = UIButton(type: .system)
         var config = UIButton.Configuration.filled()
-        config.title = "Acceder"
+        config.title = "welcome.access_button.text".localized()
         button.configuration = config
         button.addTarget(viewModel, action: #selector(viewModel.accessTapped), for: .touchUpInside)
         return button
