@@ -1,12 +1,12 @@
 //
-//  AppDependencyInjection.swift
+//  AppDependencyContainer.swift
 //  MagicJTH
 //
 //  Created by Javier Torné Hernández on 27/12/21.
 //
 
 /// Contenedor principal de inyección de dependencias.
-class AppDependencyInjection {
+class AppDependencyContainer {
     
     // MARK: - Métodos
     
