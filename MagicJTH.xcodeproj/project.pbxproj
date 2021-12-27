@@ -10,6 +10,7 @@
 		771EFB732779A9C700F0316C /* MainContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB722779A9C700F0316C /* MainContainerViewController.swift */; };
 		771EFB752779A9D300F0316C /* MainContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB742779A9D300F0316C /* MainContainerViewModel.swift */; };
 		771EFB782779AA3800F0316C /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB772779AA3800F0316C /* NiblessViewController.swift */; };
+		771EFB7B2779ABD100F0316C /* AppDependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB7A2779ABD100F0316C /* AppDependencyInjection.swift */; };
 		77B7E16327789095008BB7FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E16227789095008BB7FA /* AppDelegate.swift */; };
 		77B7E16527789096008BB7FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E16427789096008BB7FA /* SceneDelegate.swift */; };
 		77B7E16727789096008BB7FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E16627789096008BB7FA /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		771EFB722779A9C700F0316C /* MainContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerViewController.swift; sourceTree = "<group>"; };
 		771EFB742779A9D300F0316C /* MainContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerViewModel.swift; sourceTree = "<group>"; };
 		771EFB772779AA3800F0316C /* NiblessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessViewController.swift; sourceTree = "<group>"; };
+		771EFB7A2779ABD100F0316C /* AppDependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyInjection.swift; sourceTree = "<group>"; };
 		77B7E15F27789095008BB7FA /* MagicJTH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicJTH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B7E16227789095008BB7FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B7E16427789096008BB7FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,14 @@
 			path = NiblessComponents;
 			sourceTree = "<group>";
 		};
+		771EFB792779ABB700F0316C /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				771EFB7A2779ABD100F0316C /* AppDependencyInjection.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
 		77B7E15627789095008BB7FA = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +162,7 @@
 		77B7E16127789095008BB7FA /* MagicJTH */ = {
 			isa = PBXGroup;
 			children = (
+				771EFB792779ABB700F0316C /* DependencyInjection */,
 				771EFB6D2779A93100F0316C /* Screens */,
 				771EFB762779AA1000F0316C /* NiblessComponents */,
 				77B7E16227789095008BB7FA /* AppDelegate.swift */,
@@ -317,6 +328,7 @@
 				77B7E16327789095008BB7FA /* AppDelegate.swift in Sources */,
 				77B7E16527789096008BB7FA /* SceneDelegate.swift in Sources */,
 				771EFB732779A9C700F0316C /* MainContainerViewController.swift in Sources */,
+				771EFB7B2779ABD100F0316C /* AppDependencyInjection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
