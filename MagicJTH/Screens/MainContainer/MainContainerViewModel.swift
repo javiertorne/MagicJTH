@@ -14,3 +14,11 @@ class MainContainerViewModel {
     @Published var navigation: MainNavigation = .welcome
     
 }
+
+extension MainContainerViewModel: Navigator {
+    
+    func navigateToCardsList() {
+        navigation = .cardsList
+    }
+    
+}

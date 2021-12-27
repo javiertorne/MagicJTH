@@ -8,24 +8,37 @@
 /// Contenedor principal de inyección de dependencias.
 class AppDependencyContainer {
     
+    // MARK: - Propiedades
+    
+    private let sharedMainViewModel: MainContainerViewModel
+    
+    // MARK: - Constructor
+    
+    init() {
+        func makeMainContainerViewModel() -> MainContainerViewModel {
+            MainContainerViewModel()
+        }
+        
+        sharedMainViewModel = makeMainContainerViewModel()
+    }
+    
     // MARK: - Métodos
     
     // MARK: Main
     
     /// Creación del view controller que actúa como contenedor principal de vistas.
     func makeMainContainerViewController() -> MainContainerViewController {
-        let mainContainerViewModel = makeMainContainerViewModel()
+        let mainContainerViewModel = sharedMainViewModel
         let welcomeViewController = makeWelcomeViewController()
+        let cardsListViewControllerFactory = {
+            self.makeCardsListViewController()
+        }
         
         return MainContainerViewController(
             viewModel: mainContainerViewModel,
-            welcomeViewController: welcomeViewController
+            welcomeViewController: welcomeViewController,
+            cardsListViewControllerFactory: cardsListViewControllerFactory
         )
-    }
-    
-    /// Creación de un view model para el view controller que actúa como contenedor principal de vistas.
-    private func makeMainContainerViewModel() -> MainContainerViewModel {
-        MainContainerViewModel()
     }
     
     // MARK: Welcome
@@ -36,7 +49,18 @@ class AppDependencyContainer {
     }
     
     private func makeWelcomeViewModel() -> WelcomeViewModel {
-        WelcomeViewModel()
+        WelcomeViewModel(navigator: sharedMainViewModel)
+    }
+    
+    // MARK: - Cards list
+    
+    private func makeCardsListViewController() -> CardsListViewController {
+        let viewModel = makeCardsListViewModel()
+        return CardsListViewController(viewModel: viewModel)
+    }
+    
+    private func makeCardsListViewModel() -> CardsListViewModel {
+        CardsListViewModel()
     }
     
 }

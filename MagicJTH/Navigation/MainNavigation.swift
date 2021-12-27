@@ -7,4 +7,5 @@
 
 enum MainNavigation {
     case welcome
+    case cardsList
 }

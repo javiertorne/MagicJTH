@@ -10,10 +10,20 @@ import Foundation
 /// View model de la pantalla de bienvenida.
 class WelcomeViewModel {
     
+    // MARK: - Propiedades
+    
+    private let navigator: Navigator
+    
+    // MARK: - Constructor
+    
+    init(navigator: Navigator) {
+        self.navigator = navigator
+    }
+    
     // MARK: - Métodos
     
     @objc func accessTapped() {
-        print("accessTapped")
+        navigator.navigateToCardsList()
     }
     
 }

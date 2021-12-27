@@ -15,17 +15,25 @@ class MainContainerViewController: NiblessViewController {
     // MARK: - Propiedades
     
     private let viewModel: MainContainerViewModel
-    private let welcomeViewController: WelcomeViewController
     private var subscriptions = Set<AnyCancellable>()
+    
+    // View controllers hijos
+    private let welcomeViewController: WelcomeViewController
+    private var cardsListViewController: CardsListViewController?
+    
+    // Factorías
+    private let makeCardsListViewController: () -> CardsListViewController
     
     // MARK: - Constructor
     
     init(
         viewModel: MainContainerViewModel,
-        welcomeViewController: WelcomeViewController
+        welcomeViewController: WelcomeViewController,
+        cardsListViewControllerFactory: @escaping () -> CardsListViewController
     ) {
         self.viewModel = viewModel
         self.welcomeViewController = welcomeViewController
+        makeCardsListViewController = cardsListViewControllerFactory
         
         super.init()
     }
@@ -51,11 +59,23 @@ class MainContainerViewController: NiblessViewController {
         switch screen {
         case .welcome:
             presentWelcome()
+        case .cardsList:
+            presentCardsList()
         }
     }
     
     func presentWelcome() {
         addFullScreen(childViewController: welcomeViewController)
+    }
+    
+    func presentCardsList() {
+        remove(childViewController: welcomeViewController)
+        
+        cardsListViewController = makeCardsListViewController()
+        
+        if cardsListViewController != nil {
+            addFullScreen(childViewController: cardsListViewController!)
+        }
     }
     
 }
