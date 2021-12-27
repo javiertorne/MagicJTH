@@ -7,9 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		771EFB732779A9C700F0316C /* MainContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB722779A9C700F0316C /* MainContainerViewController.swift */; };
+		771EFB752779A9D300F0316C /* MainContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB742779A9D300F0316C /* MainContainerViewModel.swift */; };
+		771EFB782779AA3800F0316C /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB772779AA3800F0316C /* NiblessViewController.swift */; };
+		771EFB7B2779ABD100F0316C /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB7A2779ABD100F0316C /* AppDependencyContainer.swift */; };
+		771EFB7E2779AE1700F0316C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB7D2779AE1700F0316C /* WelcomeViewController.swift */; };
+		771EFB802779AE2000F0316C /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB7F2779AE2000F0316C /* WelcomeViewModel.swift */; };
+		771EFB822779AE2700F0316C /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB812779AE2700F0316C /* WelcomeView.swift */; };
+		771EFB842779AE4200F0316C /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB832779AE4200F0316C /* NiblessView.swift */; };
+		771EFB872779B0F400F0316C /* MainNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB862779B0F400F0316C /* MainNavigation.swift */; };
+		771EFB892779B1A400F0316C /* ViewControllerContainment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB882779B1A400F0316C /* ViewControllerContainment.swift */; };
+		771EFB97277A042400F0316C /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB96277A042400F0316C /* Measurement.swift */; };
+		771EFB9B277A09EC00F0316C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 771EFB9D277A09EC00F0316C /* Localizable.strings */; };
+		771EFBA0277A18D300F0316C /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFB9F277A18D300F0316C /* Localized.swift */; };
+		771EFBA2277A19BE00F0316C /* CardsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBA1277A19BE00F0316C /* CardsListViewController.swift */; };
+		771EFBA4277A1A3700F0316C /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBA3277A1A3700F0316C /* Navigator.swift */; };
+		771EFBA6277A1C3900F0316C /* CardsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBA5277A1C3900F0316C /* CardsListViewModel.swift */; };
 		77B7E16327789095008BB7FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E16227789095008BB7FA /* AppDelegate.swift */; };
 		77B7E16527789096008BB7FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E16427789096008BB7FA /* SceneDelegate.swift */; };
-		77B7E16727789096008BB7FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E16627789096008BB7FA /* ViewController.swift */; };
 		77B7E16C27789096008BB7FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B7E16B27789096008BB7FA /* Assets.xcassets */; };
 		77B7E16F27789096008BB7FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B7E16D27789096008BB7FA /* LaunchScreen.storyboard */; };
 		77B7E17A27789097008BB7FA /* MagicJTHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E17927789097008BB7FA /* MagicJTHTests.swift */; };
@@ -35,10 +50,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		771EFB722779A9C700F0316C /* MainContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerViewController.swift; sourceTree = "<group>"; };
+		771EFB742779A9D300F0316C /* MainContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerViewModel.swift; sourceTree = "<group>"; };
+		771EFB772779AA3800F0316C /* NiblessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessViewController.swift; sourceTree = "<group>"; };
+		771EFB7A2779ABD100F0316C /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
+		771EFB7D2779AE1700F0316C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		771EFB7F2779AE2000F0316C /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		771EFB812779AE2700F0316C /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		771EFB832779AE4200F0316C /* NiblessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
+		771EFB862779B0F400F0316C /* MainNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigation.swift; sourceTree = "<group>"; };
+		771EFB882779B1A400F0316C /* ViewControllerContainment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerContainment.swift; sourceTree = "<group>"; };
+		771EFB96277A042400F0316C /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
+		771EFB9C277A09EC00F0316C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		771EFB9E277A09FC00F0316C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		771EFB9F277A18D300F0316C /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		771EFBA1277A19BE00F0316C /* CardsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListViewController.swift; sourceTree = "<group>"; };
+		771EFBA3277A1A3700F0316C /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		771EFBA5277A1C3900F0316C /* CardsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListViewModel.swift; sourceTree = "<group>"; };
 		77B7E15F27789095008BB7FA /* MagicJTH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicJTH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B7E16227789095008BB7FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B7E16427789096008BB7FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		77B7E16627789096008BB7FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		77B7E16B27789096008BB7FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77B7E16E27789096008BB7FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77B7E17027789096008BB7FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,6 +105,104 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		771EFB6D2779A93100F0316C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				771EFB6E2779A93C00F0316C /* MainContainer */,
+				771EFB7C2779AE0900F0316C /* Welcome */,
+				771EFB6F2779A94500F0316C /* Cards */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		771EFB6E2779A93C00F0316C /* MainContainer */ = {
+			isa = PBXGroup;
+			children = (
+				771EFB722779A9C700F0316C /* MainContainerViewController.swift */,
+				771EFB742779A9D300F0316C /* MainContainerViewModel.swift */,
+			);
+			path = MainContainer;
+			sourceTree = "<group>";
+		};
+		771EFB6F2779A94500F0316C /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				771EFB702779A96C00F0316C /* CardsList */,
+				771EFB712779A97300F0316C /* CardDetail */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		771EFB702779A96C00F0316C /* CardsList */ = {
+			isa = PBXGroup;
+			children = (
+				771EFBA1277A19BE00F0316C /* CardsListViewController.swift */,
+				771EFBA5277A1C3900F0316C /* CardsListViewModel.swift */,
+			);
+			path = CardsList;
+			sourceTree = "<group>";
+		};
+		771EFB712779A97300F0316C /* CardDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CardDetail;
+			sourceTree = "<group>";
+		};
+		771EFB762779AA1000F0316C /* NiblessComponents */ = {
+			isa = PBXGroup;
+			children = (
+				771EFB772779AA3800F0316C /* NiblessViewController.swift */,
+				771EFB832779AE4200F0316C /* NiblessView.swift */,
+			);
+			path = NiblessComponents;
+			sourceTree = "<group>";
+		};
+		771EFB792779ABB700F0316C /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				771EFB7A2779ABD100F0316C /* AppDependencyContainer.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		771EFB7C2779AE0900F0316C /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				771EFB7D2779AE1700F0316C /* WelcomeViewController.swift */,
+				771EFB7F2779AE2000F0316C /* WelcomeViewModel.swift */,
+				771EFB812779AE2700F0316C /* WelcomeView.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		771EFB852779B0CE00F0316C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				771EFB862779B0F400F0316C /* MainNavigation.swift */,
+				771EFBA3277A1A3700F0316C /* Navigator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		771EFB95277A03FC00F0316C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				771EFB882779B1A400F0316C /* ViewControllerContainment.swift */,
+				771EFB96277A042400F0316C /* Measurement.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		771EFB98277A09C800F0316C /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				771EFB9F277A18D300F0316C /* Localized.swift */,
+				771EFB9D277A09EC00F0316C /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		77B7E15627789095008BB7FA = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +226,14 @@
 		77B7E16127789095008BB7FA /* MagicJTH */ = {
 			isa = PBXGroup;
 			children = (
+				771EFB792779ABB700F0316C /* DependencyInjection */,
+				771EFB6D2779A93100F0316C /* Screens */,
+				771EFB762779AA1000F0316C /* NiblessComponents */,
+				771EFB852779B0CE00F0316C /* Navigation */,
+				771EFB98277A09C800F0316C /* Localization */,
+				771EFB95277A03FC00F0316C /* Helpers */,
 				77B7E16227789095008BB7FA /* AppDelegate.swift */,
 				77B7E16427789096008BB7FA /* SceneDelegate.swift */,
-				77B7E16627789096008BB7FA /* ViewController.swift */,
 				77B7E16B27789096008BB7FA /* Assets.xcassets */,
 				77B7E16D27789096008BB7FA /* LaunchScreen.storyboard */,
 				77B7E17027789096008BB7FA /* Info.plist */,
@@ -210,6 +344,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 77B7E15627789095008BB7FA;
 			productRefGroup = 77B7E16027789095008BB7FA /* Products */;
@@ -229,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77B7E16F27789096008BB7FA /* LaunchScreen.storyboard in Resources */,
+				771EFB9B277A09EC00F0316C /* Localizable.strings in Resources */,
 				77B7E16C27789096008BB7FA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,9 +390,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77B7E16727789096008BB7FA /* ViewController.swift in Sources */,
+				771EFB752779A9D300F0316C /* MainContainerViewModel.swift in Sources */,
+				771EFB892779B1A400F0316C /* ViewControllerContainment.swift in Sources */,
+				771EFB802779AE2000F0316C /* WelcomeViewModel.swift in Sources */,
+				771EFB782779AA3800F0316C /* NiblessViewController.swift in Sources */,
 				77B7E16327789095008BB7FA /* AppDelegate.swift in Sources */,
+				771EFBA4277A1A3700F0316C /* Navigator.swift in Sources */,
+				771EFBA0277A18D300F0316C /* Localized.swift in Sources */,
+				771EFB872779B0F400F0316C /* MainNavigation.swift in Sources */,
+				771EFB822779AE2700F0316C /* WelcomeView.swift in Sources */,
 				77B7E16527789096008BB7FA /* SceneDelegate.swift in Sources */,
+				771EFBA2277A19BE00F0316C /* CardsListViewController.swift in Sources */,
+				771EFB97277A042400F0316C /* Measurement.swift in Sources */,
+				771EFB732779A9C700F0316C /* MainContainerViewController.swift in Sources */,
+				771EFB842779AE4200F0316C /* NiblessView.swift in Sources */,
+				771EFB7B2779ABD100F0316C /* AppDependencyContainer.swift in Sources */,
+				771EFB7E2779AE1700F0316C /* WelcomeViewController.swift in Sources */,
+				771EFBA6277A1C3900F0316C /* CardsListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +443,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		771EFB9D277A09EC00F0316C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				771EFB9C277A09EC00F0316C /* en */,
+				771EFB9E277A09FC00F0316C /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		77B7E16D27789096008BB7FA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -308,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -369,6 +529,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
