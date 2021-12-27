@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  MagicJTH
+
+  Created by Javier Torné Hernández on 27/12/21.
+  
+*/
+
+// MARK: - Welcome
+
+"welcome.date_label.text" = "Prueba realizada el 27/12/2021";
+"welcome.access_button.text" = "Acceder";
