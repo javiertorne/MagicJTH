@@ -34,7 +34,7 @@ struct API {
     /// Obtener la URL completa en función del endpoint que se quiere llamar.
     /// - Parameter endpoint: Endpoint que se quiere llamar.
     /// - Returns: URL completa formada por la URL base y el endpoint.
-    func getURL(endpoint: Endpoint) -> URL {
+    private func getURL(endpoint: Endpoint) -> URL {
         URL(string: "\(baseURL)/\(endpoint.rawValue)")!
     }
     
