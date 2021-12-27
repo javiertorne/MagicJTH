@@ -12,6 +12,9 @@ class AppDependencyContainer {
     
     private let sharedMainViewModel: MainContainerViewModel
     
+    // Repositorios
+    private let cardsRepository: CardsRepository
+    
     // MARK: - Constructor
     
     init() {
@@ -20,6 +23,8 @@ class AppDependencyContainer {
         }
         
         sharedMainViewModel = makeMainContainerViewModel()
+        let repositoriesContainer = RepositoriesDependencyContainer()
+        cardsRepository = repositoriesContainer.makeCardsRepository()
     }
     
     // MARK: - Métodos
@@ -60,7 +65,7 @@ class AppDependencyContainer {
     }
     
     private func makeCardsListViewModel() -> CardsListViewModel {
-        CardsListViewModel()
+        CardsListViewModel(cardsRepository: cardsRepository)
     }
     
 }

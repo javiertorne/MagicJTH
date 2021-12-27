@@ -21,7 +21,7 @@ class CardsRepositoryImpl: CardsRepository {
     
     // MARK: - Métodos
     
-    func read() -> AnyPublisher<[Card], Error> {
+    func read() -> AnyPublisher<Cards, Error> {
         remoteRepository.read()
     }
     

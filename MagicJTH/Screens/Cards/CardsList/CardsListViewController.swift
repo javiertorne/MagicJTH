@@ -24,7 +24,7 @@ class CardsListViewController: NiblessViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .purple
+        viewModel.fetchAllCards()
     }
     
 }

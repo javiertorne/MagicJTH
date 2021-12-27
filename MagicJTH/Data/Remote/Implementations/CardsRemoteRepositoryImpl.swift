@@ -9,7 +9,7 @@ import Combine
 
 class CardsRemoteRepositoryImpl: CardsRemoteRepository {
     
-    func read() -> AnyPublisher<[Card], Error> {
+    func read() -> AnyPublisher<Cards, Error> {
         API.shared.get(endpoint: .cardsList)
     }
     
