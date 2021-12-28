@@ -23,19 +23,29 @@ class CardCell: UICollectionViewCell {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.font = .preferredFont(forTextStyle: .title3)
+        label.font = .preferredFont(forTextStyle: .headline)
+        label.numberOfLines = 0
         return label
     }()
     
 
     private let typeLabel: UILabel = {
         let label = UILabel()
+        label.font = .preferredFont(forTextStyle: .subheadline)
+        label.numberOfLines = 0
+        label.textColor = .secondaryLabel
+        return label
+    }()
+    
+    private let textLabel: UILabel = {
+        let label = UILabel()
         label.font = .preferredFont(forTextStyle: .body)
+        label.numberOfLines = 0
         return label
     }()
     
     private lazy var mainStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [nameLabel, typeLabel])
+        let stackView = UIStackView(arrangedSubviews: [nameLabel, typeLabel, textLabel])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = Measurement.halfMargin
@@ -77,8 +87,16 @@ class CardCell: UICollectionViewCell {
     }
     
     func populateData() {
+        /* let spanishData = card?.foreignNames?.first { foreignName in
+            foreignName.language == "Spanish"
+        }
+        
+        nameLabel.text = spanishData?.name ?? card?.name
+        typeLabel.text = spanishData?.type ?? card?.type
+        textLabel.text = spanishData?.text ?? card?.text */
         nameLabel.text = card?.name
         typeLabel.text = card?.type
+        textLabel.text = card?.text
     }
     
 }
