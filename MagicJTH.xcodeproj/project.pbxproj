@@ -58,6 +58,7 @@
 		77E2C4C2277B5C7100814EBA /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2C4C1277B5C7100814EBA /* CustomError.swift */; };
 		77E2C4C4277B625A00814EBA /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2C4C3277B625A00814EBA /* NetworkMonitor.swift */; };
 		77E2C4C6277B6B8000814EBA /* ShowErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2C4C5277B6B8000814EBA /* ShowErrorMessage.swift */; };
+		77E2C4C8277B7E9800814EBA /* ScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2C4C7277B7E9800814EBA /* ScreenState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		77E2C4C1277B5C7100814EBA /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		77E2C4C3277B625A00814EBA /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		77E2C4C5277B6B8000814EBA /* ShowErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowErrorMessage.swift; sourceTree = "<group>"; };
+		77E2C4C7277B7E9800814EBA /* ScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 		771EFB6D2779A93100F0316C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				77E2C4C7277B7E9800814EBA /* ScreenState.swift */,
 				771EFB6E2779A93C00F0316C /* MainContainer */,
 				771EFB7C2779AE0900F0316C /* Welcome */,
 				771EFB6F2779A94500F0316C /* Cards */,
@@ -592,6 +595,7 @@
 				771EFB842779AE4200F0316C /* NiblessView.swift in Sources */,
 				771EFB7B2779ABD100F0316C /* AppDependencyContainer.swift in Sources */,
 				771EFB7E2779AE1700F0316C /* WelcomeViewController.swift in Sources */,
+				77E2C4C8277B7E9800814EBA /* ScreenState.swift in Sources */,
 				77E2C4C0277B37EB00814EBA /* ForeignNameTransformer.swift in Sources */,
 				771EFBA9277A1D8500F0316C /* API.swift in Sources */,
 				771EFBA6277A1C3900F0316C /* CardsListViewModel.swift in Sources */,
