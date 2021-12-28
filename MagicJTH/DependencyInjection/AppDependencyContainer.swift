@@ -38,11 +38,15 @@ class AppDependencyContainer {
         let cardsListViewControllerFactory = {
             self.makeCardsListViewController()
         }
+        let cardDetailViewControllerFactory = { (card: Card) in
+            self.makeCardDetailViewController(card)
+        }
         
         return MainContainerViewController(
             viewModel: mainContainerViewModel,
             welcomeViewController: welcomeViewController,
-            cardsListViewControllerFactory: cardsListViewControllerFactory
+            cardsListViewControllerFactory: cardsListViewControllerFactory,
+            cardDetailViewControllerFactory: cardDetailViewControllerFactory
         )
     }
     
@@ -57,7 +61,7 @@ class AppDependencyContainer {
         WelcomeViewModel(navigator: sharedMainViewModel)
     }
     
-    // MARK: - Cards list
+    // MARK: Cards list
     
     private func makeCardsListViewController() -> CardsListViewController {
         let viewModel = makeCardsListViewModel()
@@ -66,6 +70,17 @@ class AppDependencyContainer {
     
     private func makeCardsListViewModel() -> CardsListViewModel {
         CardsListViewModel(cardsRepository: cardsRepository)
+    }
+    
+    // MARK: Card detail
+    
+    private func makeCardDetailViewController(_ card: Card) -> CardDetailViewController {
+        let viewModel = makeCardDetailViewModel(card)
+        return CardDetailViewController(viewModel: viewModel)
+    }
+    
+    private func makeCardDetailViewModel(_ card: Card) -> CardDetailViewModel {
+        CardDetailViewModel(card: card)
     }
     
 }

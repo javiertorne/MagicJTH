@@ -33,6 +33,9 @@
 		771EFBBD277A2B7000F0316C /* CardsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBBC277A2B7000F0316C /* CardsListView.swift */; };
 		771EFBBF277A2EA200F0316C /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBBE277A2EA200F0316C /* CardCell.swift */; };
 		771EFBC1277A347700F0316C /* NiblessNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBC0277A347700F0316C /* NiblessNavigationController.swift */; };
+		771EFBC3277AEB8100F0316C /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBC2277AEB8100F0316C /* CardDetailViewController.swift */; };
+		771EFBC5277AEB8900F0316C /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBC4277AEB8900F0316C /* CardDetailViewModel.swift */; };
+		771EFBC7277AEB9000F0316C /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBC6277AEB9000F0316C /* CardDetailView.swift */; };
 		77B7E16327789095008BB7FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E16227789095008BB7FA /* AppDelegate.swift */; };
 		77B7E16527789096008BB7FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E16427789096008BB7FA /* SceneDelegate.swift */; };
 		77B7E16C27789096008BB7FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B7E16B27789096008BB7FA /* Assets.xcassets */; };
@@ -87,6 +90,9 @@
 		771EFBBC277A2B7000F0316C /* CardsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListView.swift; sourceTree = "<group>"; };
 		771EFBBE277A2EA200F0316C /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		771EFBC0277A347700F0316C /* NiblessNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessNavigationController.swift; sourceTree = "<group>"; };
+		771EFBC2277AEB8100F0316C /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		771EFBC4277AEB8900F0316C /* CardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModel.swift; sourceTree = "<group>"; };
+		771EFBC6277AEB9000F0316C /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 		77B7E15F27789095008BB7FA /* MagicJTH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicJTH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B7E16227789095008BB7FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B7E16427789096008BB7FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +173,9 @@
 		771EFB712779A97300F0316C /* CardDetail */ = {
 			isa = PBXGroup;
 			children = (
+				771EFBC2277AEB8100F0316C /* CardDetailViewController.swift */,
+				771EFBC4277AEB8900F0316C /* CardDetailViewModel.swift */,
+				771EFBC6277AEB9000F0316C /* CardDetailView.swift */,
 			);
 			path = CardDetail;
 			sourceTree = "<group>";
@@ -473,6 +482,8 @@
 				771EFBBB277A22D800F0316C /* RepositoriesDependencyContainer.swift in Sources */,
 				771EFB892779B1A400F0316C /* ViewControllerContainment.swift in Sources */,
 				771EFB802779AE2000F0316C /* WelcomeViewModel.swift in Sources */,
+				771EFBC7277AEB9000F0316C /* CardDetailView.swift in Sources */,
+				771EFBC5277AEB8900F0316C /* CardDetailViewModel.swift in Sources */,
 				771EFB782779AA3800F0316C /* NiblessViewController.swift in Sources */,
 				77B7E16327789095008BB7FA /* AppDelegate.swift in Sources */,
 				771EFBB5277A200700F0316C /* CardsRemoteRepository.swift in Sources */,
@@ -481,6 +492,7 @@
 				771EFBA0277A18D300F0316C /* Localized.swift in Sources */,
 				771EFBBF277A2EA200F0316C /* CardCell.swift in Sources */,
 				771EFBB0277A1EE200F0316C /* Card.swift in Sources */,
+				771EFBC3277AEB8100F0316C /* CardDetailViewController.swift in Sources */,
 				771EFB872779B0F400F0316C /* MainNavigation.swift in Sources */,
 				771EFBAD277A1E9D00F0316C /* CardsRepository.swift in Sources */,
 				771EFB822779AE2700F0316C /* WelcomeView.swift in Sources */,

@@ -11,15 +11,15 @@ class NiblessNavigationController: UINavigationController {
     
     // MARK: - Constructor
     
-    init(viewController: UIViewController) {
-        super.init(rootViewController: viewController)
+    init() {
+        super.init(nibName: nil, bundle: nil)
     }
     
     // MARK: - Methods
     
     @available(*, unavailable, message: "Cargar este controlador de vistas desde un nib no se soporta en favor de un constructor con inyección de dependencias.")
-    override init(rootViewController: UIViewController) {
-        super.init(rootViewController: rootViewController)
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
     @available(*, unavailable, message: "Cargar este controlador de vistas desde un nib no se soporta en favor de un constructor con inyección de dependencias.")

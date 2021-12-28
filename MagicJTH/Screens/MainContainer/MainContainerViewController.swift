@@ -10,7 +10,7 @@ import Dispatch
 
 /// View controller principal que sirve como contenedor para el resto de vistas.
 /// También se encarga de la navegación entre pantallas.
-class MainContainerViewController: NiblessViewController {
+class MainContainerViewController: NiblessNavigationController {
     
     // MARK: - Propiedades
     
@@ -20,20 +20,24 @@ class MainContainerViewController: NiblessViewController {
     // View controllers hijos
     private let welcomeViewController: WelcomeViewController
     private var cardsListViewController: CardsListViewController?
+    private var cardDetailViewController: CardDetailViewController?
     
     // Factorías
     private let makeCardsListViewController: () -> CardsListViewController
+    private let makeCardDetailViewController: (Card) -> CardDetailViewController
     
     // MARK: - Constructor
     
     init(
         viewModel: MainContainerViewModel,
         welcomeViewController: WelcomeViewController,
-        cardsListViewControllerFactory: @escaping () -> CardsListViewController
+        cardsListViewControllerFactory: @escaping () -> CardsListViewController,
+        cardDetailViewControllerFactory: @escaping (Card) -> CardDetailViewController
     ) {
         self.viewModel = viewModel
         self.welcomeViewController = welcomeViewController
         makeCardsListViewController = cardsListViewControllerFactory
+        makeCardDetailViewController = cardDetailViewControllerFactory
         
         super.init()
     }
@@ -42,7 +46,8 @@ class MainContainerViewController: NiblessViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationBar.prefersLargeTitles = true
         observeNavigation()
     }
     
@@ -61,6 +66,8 @@ class MainContainerViewController: NiblessViewController {
             presentWelcome()
         case .cardsList:
             presentCardsList()
+        case .cardDetail(let card):
+            presentCardDetail(card)
         }
     }
     
@@ -74,8 +81,15 @@ class MainContainerViewController: NiblessViewController {
         cardsListViewController = makeCardsListViewController()
         
         if cardsListViewController != nil {
-            let navigationController = NiblessNavigationController(viewController: cardsListViewController!)
-            addFullScreen(childViewController: navigationController)
+            pushViewController(cardsListViewController!, animated: false)
+        }
+    }
+    
+    private func presentCardDetail(_ card: Card) {
+        cardDetailViewController = makeCardDetailViewController(card)
+        
+        if cardDetailViewController != nil {
+            pushViewController(cardDetailViewController!, animated: true)
         }
     }
     
