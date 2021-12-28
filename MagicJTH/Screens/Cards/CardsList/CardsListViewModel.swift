@@ -39,7 +39,6 @@ class CardsListViewModel {
             } receiveValue: { [weak self] cards in
                 guard let theCards = cards.cards else { return }
                 self?.cards = theCards
-                print(theCards)
             }
             .store(in: &subscriptions)
     }

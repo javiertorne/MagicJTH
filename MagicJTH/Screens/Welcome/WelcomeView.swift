@@ -92,7 +92,7 @@ class WelcomeView: ViewForViewController {
     
     func anchorViews() {
         NSLayoutConstraint.activate([
-            stackView.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
+            stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
             stackView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: Measurement.margin),
             stackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -Measurement.margin)
         ])
