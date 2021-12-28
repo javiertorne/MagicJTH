@@ -14,3 +14,11 @@
 // MARK: - Cards list
 
 "cards_list.title.text" = "Cartas";
+
+// MARK: - Errors
+
+"error.unknown" = "Se ha producido un error desconocido. Por favor, inténtalo de nuevo más tarde.";
+"error.no_internet" = "No tienes conexión a internet. Por favor, conéctate y vuelve a intentarlo.";
+"error.other" = "¡Vaya, algo no ha ido bien! Por favor, inténtalo de nuevo más tarde.";
+"error.alert.title" = "Error";
+"error.alert.close" = "Cerrar";

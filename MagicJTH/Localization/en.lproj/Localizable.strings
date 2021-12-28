@@ -14,3 +14,11 @@
 // MARK: - Cards list
 
 "cards_list.title.text" = "Cards";
+
+// MARK: - Errors
+
+"error.unknown" = "An unknown error has occurred. Please try again later.";
+"error.no_internet" = "You don't have an internet connection. Please connect and try again.";
+"error.other" = "Oops, something went wrong! Please try again later.";
+"error.alert.title" = "Error";
+"error.alert.close" = "Close";

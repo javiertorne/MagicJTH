@@ -33,9 +33,7 @@ class CardsLocalRepositoryImpl: CardsLocalRepository {
             guard let batchInsert = batchInsert else { return }
             do {
                 try context.execute(deleteRequest)
-                print("🔴 borrado")
                 try context.execute(batchInsert)
-                print("🟢 inserted")
                 
                 completion(nil)
             } catch {

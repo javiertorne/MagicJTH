@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Foundation
 
 class CardsListViewModel {
     
@@ -15,6 +16,7 @@ class CardsListViewModel {
     private let navigator: Navigator
     @Published var cards = [CardDTO]()
     private var subscriptions = Set<AnyCancellable>()
+    @Published var errorMessage: String?
     
     // MARK: - Constructor
     
@@ -28,10 +30,10 @@ class CardsListViewModel {
     func fetchAllCards() {
         cardsRepository
             .read()
-            .sink { completion in
+            .sink { [weak self] completion in
                 switch completion {
                 case .failure(let error):
-                    print(error.localizedDescription)
+                    self?.errorMessage = self?.getErrorMessage(error: error)
                     break
                 case .finished:
                     break
@@ -43,10 +45,12 @@ class CardsListViewModel {
             .store(in: &subscriptions)
     }
     
-    func sync() {
+    @objc func sync() {
         cardsRepository.sync { [weak self] error in
             if error != nil {
-                print(error!.localizedDescription)
+                if let cards = self?.cards, cards.isEmpty {
+                    self?.errorMessage = self?.getErrorMessage(error: error!)
+                }
             } else {
                 self?.fetchAllCards()
             }
@@ -56,6 +60,25 @@ class CardsListViewModel {
     func cardTapped(at index: Int) {
         let card = cards[index]
         navigator.navigateToCardDetail(card)
+    }
+    
+    private func getErrorMessage(error: Error) -> String {
+        if error is CustomError {
+            switch error as! CustomError {
+            case .noInternet:
+                return "error.no_internet".localized()
+            case .unknown:
+                return "error.unknown".localized()
+            default:
+                return "error.other".localized()
+            }
+        }
+        
+        return "error.unknown".localized()
+    }
+    
+    func resetErrorMessage() {
+        errorMessage = nil
     }
     
 }
