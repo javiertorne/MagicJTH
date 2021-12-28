@@ -9,7 +9,7 @@ class CardDetailViewModel {
     
     // MARK: - Propiedades
     
-    private let card: Card
+    let card: Card
     
     // MARK: - Constructor
     

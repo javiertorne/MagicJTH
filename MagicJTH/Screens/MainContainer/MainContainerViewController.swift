@@ -47,11 +47,16 @@ class MainContainerViewController: NiblessNavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationBar.prefersLargeTitles = true
+        setupNavigationBar()
         observeNavigation()
     }
     
-    func observeNavigation() {
+    private func setupNavigationBar() {
+        navigationBar.prefersLargeTitles = true
+        navigationBar.tintColor = .label
+    }
+    
+    private func observeNavigation() {
         viewModel.$navigation
             .receive(on: DispatchQueue.main)
             .sink { [weak self] screen in
@@ -60,7 +65,7 @@ class MainContainerViewController: NiblessNavigationController {
             .store(in: &subscriptions)
     }
     
-    func present(_ screen: MainNavigation) {
+    private func present(_ screen: MainNavigation) {
         switch screen {
         case .welcome:
             presentWelcome()
@@ -71,11 +76,11 @@ class MainContainerViewController: NiblessNavigationController {
         }
     }
     
-    func presentWelcome() {
+    private func presentWelcome() {
         addFullScreen(childViewController: welcomeViewController)
     }
     
-    func presentCardsList() {
+    private func presentCardsList() {
         remove(childViewController: welcomeViewController)
         
         cardsListViewController = makeCardsListViewController()

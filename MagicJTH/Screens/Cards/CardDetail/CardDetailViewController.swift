@@ -25,4 +25,14 @@ class CardDetailViewController: NiblessViewController {
         view = CardDetailView(viewModel: viewModel)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.largeTitleDisplayMode = .never
+    }
+    
 }

@@ -52,6 +52,7 @@ class WelcomeView: ViewForViewController {
         let button = UIButton(type: .system)
         var config = UIButton.Configuration.filled()
         config.title = "welcome.access_button.text".localized()
+        config.baseBackgroundColor = .systemBrown
         button.configuration = config
         button.addTarget(viewModel, action: #selector(viewModel.accessTapped), for: .touchUpInside)
         return button
