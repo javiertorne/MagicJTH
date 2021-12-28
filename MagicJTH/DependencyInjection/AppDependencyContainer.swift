@@ -69,7 +69,10 @@ class AppDependencyContainer {
     }
     
     private func makeCardsListViewModel() -> CardsListViewModel {
-        CardsListViewModel(cardsRepository: cardsRepository)
+        CardsListViewModel(
+            cardsRepository: cardsRepository,
+            navigator: sharedMainViewModel
+        )
     }
     
     // MARK: Card detail

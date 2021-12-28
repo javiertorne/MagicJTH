@@ -22,7 +22,7 @@ class CardDetailViewController: NiblessViewController {
     // MARK: - Métodos
     
     override func loadView() {
-        view = CardDetailView()
+        view = CardDetailView(viewModel: viewModel)
     }
     
 }
