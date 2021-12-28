@@ -42,6 +42,7 @@ class CardDetailView: ViewForViewController {
     private lazy var imageView: UIImageView = {
         let image = UIImageView()
         if let imageUrl = viewModel.card.imageURL {
+            image.contentMode = .scaleAspectFit
             image.sd_setImage(with: URL(string: imageUrl))
         }
         return image
