@@ -75,7 +75,7 @@ class WelcomeView: ViewForViewController {
         }
 
         styleView()
-        constructHierachy()
+        constructHierarchy()
         anchorViews()
 
         hierarchyNotReady = false
@@ -85,7 +85,7 @@ class WelcomeView: ViewForViewController {
         backgroundColor = .systemBackground
     }
     
-    func constructHierachy() {
+    func constructHierarchy() {
         addSubview(stackView)
     }
     

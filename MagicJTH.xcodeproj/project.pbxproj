@@ -29,6 +29,10 @@
 		771EFBB3277A1FCF00F0316C /* CardsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBB2277A1FCF00F0316C /* CardsRepositoryImpl.swift */; };
 		771EFBB5277A200700F0316C /* CardsRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBB4277A200700F0316C /* CardsRemoteRepository.swift */; };
 		771EFBB8277A204900F0316C /* CardsRemoteRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBB7277A204900F0316C /* CardsRemoteRepositoryImpl.swift */; };
+		771EFBBB277A22D800F0316C /* RepositoriesDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBBA277A22D800F0316C /* RepositoriesDependencyContainer.swift */; };
+		771EFBBD277A2B7000F0316C /* CardsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBBC277A2B7000F0316C /* CardsListView.swift */; };
+		771EFBBF277A2EA200F0316C /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBBE277A2EA200F0316C /* CardCell.swift */; };
+		771EFBC1277A347700F0316C /* NiblessNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBC0277A347700F0316C /* NiblessNavigationController.swift */; };
 		77B7E16327789095008BB7FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E16227789095008BB7FA /* AppDelegate.swift */; };
 		77B7E16527789096008BB7FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E16427789096008BB7FA /* SceneDelegate.swift */; };
 		77B7E16C27789096008BB7FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B7E16B27789096008BB7FA /* Assets.xcassets */; };
@@ -79,6 +83,10 @@
 		771EFBB2277A1FCF00F0316C /* CardsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsRepositoryImpl.swift; sourceTree = "<group>"; };
 		771EFBB4277A200700F0316C /* CardsRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsRemoteRepository.swift; sourceTree = "<group>"; };
 		771EFBB7277A204900F0316C /* CardsRemoteRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsRemoteRepositoryImpl.swift; sourceTree = "<group>"; };
+		771EFBBA277A22D800F0316C /* RepositoriesDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesDependencyContainer.swift; sourceTree = "<group>"; };
+		771EFBBC277A2B7000F0316C /* CardsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListView.swift; sourceTree = "<group>"; };
+		771EFBBE277A2EA200F0316C /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		771EFBC0277A347700F0316C /* NiblessNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessNavigationController.swift; sourceTree = "<group>"; };
 		77B7E15F27789095008BB7FA /* MagicJTH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicJTH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B7E16227789095008BB7FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B7E16427789096008BB7FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +158,8 @@
 			children = (
 				771EFBA1277A19BE00F0316C /* CardsListViewController.swift */,
 				771EFBA5277A1C3900F0316C /* CardsListViewModel.swift */,
+				771EFBBC277A2B7000F0316C /* CardsListView.swift */,
+				771EFBBE277A2EA200F0316C /* CardCell.swift */,
 			);
 			path = CardsList;
 			sourceTree = "<group>";
@@ -166,6 +176,7 @@
 			children = (
 				771EFB772779AA3800F0316C /* NiblessViewController.swift */,
 				771EFB832779AE4200F0316C /* NiblessView.swift */,
+				771EFBC0277A347700F0316C /* NiblessNavigationController.swift */,
 			);
 			path = NiblessComponents;
 			sourceTree = "<group>";
@@ -174,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				771EFB7A2779ABD100F0316C /* AppDependencyContainer.swift */,
+				771EFBBA277A22D800F0316C /* RepositoriesDependencyContainer.swift */,
 			);
 			path = DependencyInjection;
 			sourceTree = "<group>";
@@ -458,13 +470,16 @@
 			files = (
 				771EFB752779A9D300F0316C /* MainContainerViewModel.swift in Sources */,
 				771EFBB8277A204900F0316C /* CardsRemoteRepositoryImpl.swift in Sources */,
+				771EFBBB277A22D800F0316C /* RepositoriesDependencyContainer.swift in Sources */,
 				771EFB892779B1A400F0316C /* ViewControllerContainment.swift in Sources */,
 				771EFB802779AE2000F0316C /* WelcomeViewModel.swift in Sources */,
 				771EFB782779AA3800F0316C /* NiblessViewController.swift in Sources */,
 				77B7E16327789095008BB7FA /* AppDelegate.swift in Sources */,
 				771EFBB5277A200700F0316C /* CardsRemoteRepository.swift in Sources */,
 				771EFBA4277A1A3700F0316C /* Navigator.swift in Sources */,
+				771EFBBD277A2B7000F0316C /* CardsListView.swift in Sources */,
 				771EFBA0277A18D300F0316C /* Localized.swift in Sources */,
+				771EFBBF277A2EA200F0316C /* CardCell.swift in Sources */,
 				771EFBB0277A1EE200F0316C /* Card.swift in Sources */,
 				771EFB872779B0F400F0316C /* MainNavigation.swift in Sources */,
 				771EFBAD277A1E9D00F0316C /* CardsRepository.swift in Sources */,
@@ -474,6 +489,7 @@
 				771EFB97277A042400F0316C /* Measurement.swift in Sources */,
 				771EFB732779A9C700F0316C /* MainContainerViewController.swift in Sources */,
 				771EFBB3277A1FCF00F0316C /* CardsRepositoryImpl.swift in Sources */,
+				771EFBC1277A347700F0316C /* NiblessNavigationController.swift in Sources */,
 				771EFB842779AE4200F0316C /* NiblessView.swift in Sources */,
 				771EFB7B2779ABD100F0316C /* AppDependencyContainer.swift in Sources */,
 				771EFB7E2779AE1700F0316C /* WelcomeViewController.swift in Sources */,

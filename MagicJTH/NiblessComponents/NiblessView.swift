@@ -24,7 +24,7 @@ class NiblessView: UIView {
 
 protocol ViewForViewControllerProtocol {
     func styleView()
-    func constructHierachy()
+    func constructHierarchy()
     func anchorViews()
 }
 
