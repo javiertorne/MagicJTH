@@ -9,11 +9,11 @@ class CardDetailViewModel {
     
     // MARK: - Propiedades
     
-    let card: Card
+    let card: CardDTO
     
     // MARK: - Constructor
     
-    init(card: Card) {
+    init(card: CardDTO) {
         self.card = card
     }
     

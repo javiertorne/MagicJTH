@@ -24,7 +24,7 @@ class MainContainerViewController: NiblessNavigationController {
     
     // Factorías
     private let makeCardsListViewController: () -> CardsListViewController
-    private let makeCardDetailViewController: (Card) -> CardDetailViewController
+    private let makeCardDetailViewController: (CardDTO) -> CardDetailViewController
     
     // MARK: - Constructor
     
@@ -32,7 +32,7 @@ class MainContainerViewController: NiblessNavigationController {
         viewModel: MainContainerViewModel,
         welcomeViewController: WelcomeViewController,
         cardsListViewControllerFactory: @escaping () -> CardsListViewController,
-        cardDetailViewControllerFactory: @escaping (Card) -> CardDetailViewController
+        cardDetailViewControllerFactory: @escaping (CardDTO) -> CardDetailViewController
     ) {
         self.viewModel = viewModel
         self.welcomeViewController = welcomeViewController
@@ -90,7 +90,7 @@ class MainContainerViewController: NiblessNavigationController {
         }
     }
     
-    private func presentCardDetail(_ card: Card) {
+    private func presentCardDetail(_ card: CardDTO) {
         cardDetailViewController = makeCardDetailViewController(card)
         
         if cardDetailViewController != nil {

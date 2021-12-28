@@ -9,6 +9,6 @@ import Combine
 
 protocol CardsRemoteRepository {
     
-    func read() -> AnyPublisher<Cards, Error>
+    func read() -> AnyPublisher<CardsDTO, Error>
     
 }

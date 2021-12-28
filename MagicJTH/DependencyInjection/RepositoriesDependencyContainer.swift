@@ -11,11 +11,19 @@ class RepositoriesDependencyContainer {
     
     func makeCardsRepository() -> CardsRepository {
         let cardsRemotesRepository = makeCardsRemoteRepository()
-        return CardsRepositoryImpl(remoteRepository: cardsRemotesRepository)
+        let cardsLocalRepository = makeCardsLocalRepository()
+        return CardsRepositoryImpl(
+            remoteRepository: cardsRemotesRepository,
+            localRepository: cardsLocalRepository
+        )
     }
     
     private func makeCardsRemoteRepository() -> CardsRemoteRepository {
         CardsRemoteRepositoryImpl()
+    }
+    
+    private func makeCardsLocalRepository() -> CardsLocalRepository {
+        CardsLocalRepositoryImpl()
     }
     
 }
