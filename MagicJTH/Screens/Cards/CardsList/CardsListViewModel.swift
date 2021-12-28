@@ -12,13 +12,15 @@ class CardsListViewModel {
     // MARK: - Propiedades
     
     private let cardsRepository: CardsRepository
+    private let navigator: Navigator
     @Published var cards = [Card]()
     private var subscriptions = Set<AnyCancellable>()
     
     // MARK: - Constructor
     
-    init(cardsRepository: CardsRepository) {
+    init(cardsRepository: CardsRepository, navigator: Navigator) {
         self.cardsRepository = cardsRepository
+        self.navigator = navigator
     }
     
     // MARK: - Métodos
@@ -37,9 +39,13 @@ class CardsListViewModel {
             } receiveValue: { [weak self] cards in
                 guard let theCards = cards.cards else { return }
                 self?.cards = theCards
-                print(theCards)
             }
             .store(in: &subscriptions)
+    }
+    
+    func cardTapped(at index: Int) {
+        let card = cards[index]
+        navigator.navigateToCardDetail(card)
     }
     
 }

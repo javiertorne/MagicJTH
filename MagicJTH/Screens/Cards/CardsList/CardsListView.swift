@@ -97,8 +97,7 @@ extension CardsListView: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //viewModel.goToDetail(index: indexPath.item)
-        print("pulsado \(indexPath.item)")
+        viewModel.cardTapped(at: indexPath.item)
     }
     
 }

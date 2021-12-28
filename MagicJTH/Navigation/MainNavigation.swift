@@ -8,4 +8,5 @@
 enum MainNavigation {
     case welcome
     case cardsList
+    case cardDetail(_ card: Card)
 }

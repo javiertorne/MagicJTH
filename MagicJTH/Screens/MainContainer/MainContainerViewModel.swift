@@ -21,4 +21,8 @@ extension MainContainerViewModel: Navigator {
         navigation = .cardsList
     }
     
+    func navigateToCardDetail(_ card: Card) {
+        navigation = .cardDetail(card)
+    }
+    
 }

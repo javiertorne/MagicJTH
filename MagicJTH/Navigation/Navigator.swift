@@ -8,5 +8,6 @@
 protocol Navigator {
     
     func navigateToCardsList()
+    func navigateToCardDetail(_ card: Card)
     
 }

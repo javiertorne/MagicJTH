@@ -35,7 +35,6 @@ class CardsListViewController: NiblessViewController {
     }
     
     private func setupNavigationBar() {
-        navigationController?.navigationBar.prefersLargeTitles = true
         title = "cards_list.title.text".localized()
     }
     
