@@ -29,10 +29,6 @@ class CardsRepositoryImpl: CardsRepository {
             .sink { completed in
                 switch completed {
                 case .failure(let error):
-                    /*let errorMessage = ErrorMessage(
-                        title: "general.alert_message.error".localized(),
-                        message: error.localizedDescription
-                    )*/
                     completion(error)
                     break
                 case .finished:

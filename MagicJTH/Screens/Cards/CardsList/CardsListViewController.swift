@@ -5,11 +5,16 @@
 //  Created by Javier Torné Hernández on 27/12/21.
 //
 
+import Combine
+import Dispatch
+import UIKit.UIBarButtonItem
+
 class CardsListViewController: NiblessViewController {
     
     // MARK: - Propiedades
     
     private let viewModel: CardsListViewModel
+    private var subscriptions = Set<AnyCancellable>()
     
     // MARK: - Constructor
     
@@ -25,6 +30,7 @@ class CardsListViewController: NiblessViewController {
         super.viewDidLoad()
         
         setupNavigationBar()
+        observeErrorMessages()
         viewModel.fetchAllCards()
         viewModel.sync()
     }
@@ -37,6 +43,20 @@ class CardsListViewController: NiblessViewController {
     
     private func setupNavigationBar() {
         title = "cards_list.title.text".localized()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.clockwise.circle.fill"), style: .plain, target: viewModel, action: #selector(viewModel.sync))
+    }
+    
+    private func observeErrorMessages() {
+        viewModel.$errorMessage
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] errorMessage in
+                if let errorMessage = errorMessage {
+                    self?.present(errorMessage: errorMessage) {
+                        self?.viewModel.resetErrorMessage()
+                    }
+                }
+            }
+            .store(in: &subscriptions)
     }
     
 }

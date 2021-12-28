@@ -55,6 +55,9 @@
 		77E2C4BC277B328C00814EBA /* LegalityTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2C4BB277B328C00814EBA /* LegalityTransformer.swift */; };
 		77E2C4BE277B37DE00814EBA /* RulingTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2C4BD277B37DE00814EBA /* RulingTransformer.swift */; };
 		77E2C4C0277B37EB00814EBA /* ForeignNameTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2C4BF277B37EB00814EBA /* ForeignNameTransformer.swift */; };
+		77E2C4C2277B5C7100814EBA /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2C4C1277B5C7100814EBA /* CustomError.swift */; };
+		77E2C4C4277B625A00814EBA /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2C4C3277B625A00814EBA /* NetworkMonitor.swift */; };
+		77E2C4C6277B6B8000814EBA /* ShowErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E2C4C5277B6B8000814EBA /* ShowErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +130,9 @@
 		77E2C4BB277B328C00814EBA /* LegalityTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalityTransformer.swift; sourceTree = "<group>"; };
 		77E2C4BD277B37DE00814EBA /* RulingTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulingTransformer.swift; sourceTree = "<group>"; };
 		77E2C4BF277B37EB00814EBA /* ForeignNameTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignNameTransformer.swift; sourceTree = "<group>"; };
+		77E2C4C1277B5C7100814EBA /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		77E2C4C3277B625A00814EBA /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		77E2C4C5277B6B8000814EBA /* ShowErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +253,8 @@
 			children = (
 				771EFB882779B1A400F0316C /* ViewControllerContainment.swift */,
 				771EFB96277A042400F0316C /* Measurement.swift */,
+				77E2C4C3277B625A00814EBA /* NetworkMonitor.swift */,
+				77E2C4C5277B6B8000814EBA /* ShowErrorMessage.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -298,6 +306,7 @@
 				77E2C4AD277B15C900814EBA /* ForeignNameDTO.swift */,
 				77E2C4AF277B15E700814EBA /* LegalityDTO.swift */,
 				77E2C4B1277B15F700814EBA /* RulingDTO.swift */,
+				77E2C4C1277B5C7100814EBA /* CustomError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -555,6 +564,7 @@
 				77E2C4A4277B0E4A00814EBA /* Main.xcdatamodeld in Sources */,
 				771EFBC5277AEB8900F0316C /* CardDetailViewModel.swift in Sources */,
 				771EFB782779AA3800F0316C /* NiblessViewController.swift in Sources */,
+				77E2C4C6277B6B8000814EBA /* ShowErrorMessage.swift in Sources */,
 				77B7E16327789095008BB7FA /* AppDelegate.swift in Sources */,
 				771EFBB5277A200700F0316C /* CardsRemoteRepository.swift in Sources */,
 				771EFBA4277A1A3700F0316C /* Navigator.swift in Sources */,
@@ -572,11 +582,13 @@
 				771EFB822779AE2700F0316C /* WelcomeView.swift in Sources */,
 				77B7E16527789096008BB7FA /* SceneDelegate.swift in Sources */,
 				771EFBA2277A19BE00F0316C /* CardsListViewController.swift in Sources */,
+				77E2C4C4277B625A00814EBA /* NetworkMonitor.swift in Sources */,
 				771EFB97277A042400F0316C /* Measurement.swift in Sources */,
 				77E2C4B2277B15F700814EBA /* RulingDTO.swift in Sources */,
 				771EFB732779A9C700F0316C /* MainContainerViewController.swift in Sources */,
 				771EFBB3277A1FCF00F0316C /* CardsRepositoryImpl.swift in Sources */,
 				771EFBC1277A347700F0316C /* NiblessNavigationController.swift in Sources */,
+				77E2C4C2277B5C7100814EBA /* CustomError.swift in Sources */,
 				771EFB842779AE4200F0316C /* NiblessView.swift in Sources */,
 				771EFB7B2779ABD100F0316C /* AppDependencyContainer.swift in Sources */,
 				771EFB7E2779AE1700F0316C /* WelcomeViewController.swift in Sources */,
