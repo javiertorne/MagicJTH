@@ -1,15 +1,19 @@
 //
-//  Card.swift
+//  CardDTO.swift
 //  MagicJTH
 //
 //  Created by Javier Torné Hernández on 27/12/21.
 //
 
-struct Cards: Codable {
-    let cards: [Card]?
+struct CardsDTO: Codable {
+    let cards: [CardDTO]?
+    
+    enum CodingKeys: String, CodingKey {
+        case cards
+    }
 }
 
-struct Card: Codable {
+struct CardDTO: Codable {
     let name: String?
     let manaCost: String?
     let cmc: Double?
@@ -33,44 +37,18 @@ struct Card: Codable {
     let printings: [String]?
     let originalText: String?
     let originalType: String?
-    let legalities: [Legality]?
+    let legalities: [LegalityDTO]?
     let id: String?
     let watermark: String?
-    let rulings: [Ruling]?
+    let rulings: [RulingDTO]?
     let variations: [String]?
     let supertypes: [String]?
-    let foreignNames: [ForeignName]?
+    let foreignNames: [ForeignNameDTO]?
     
     enum CodingKeys: String, CodingKey {
         case name, manaCost, cmc, colors, colorIdentity, type, types, subtypes, rarity, setName, text, flavor, artist, number, power, toughness, layout, multiverseid, printings, originalText, originalType, legalities, id, watermark, rulings, variations, supertypes, foreignNames
         case cardSet = "set"
         case imageURL = "imageUrl"
     }
-}
-
-struct ForeignName: Codable {
-    let name: String?
-    let text: String?
-    let type: String?
-    let flavor: String?
-    let imageURL: String?
-    let language: String?
-    let multiverseid: Int?
-    
-    enum CodingKeys: String, CodingKey {
-        case name, text, type, flavor
-        case imageURL = "imageUrl"
-        case language, multiverseid
-    }
-}
-
-struct Legality: Codable {
-    let format: String?
-    let legality: String?
-}
-
-struct Ruling: Codable {
-    let date: String?
-    let text: String?
 }
 

@@ -13,7 +13,7 @@ class CardsListViewModel {
     
     private let cardsRepository: CardsRepository
     private let navigator: Navigator
-    @Published var cards = [Card]()
+    @Published var cards = [CardDTO]()
     private var subscriptions = Set<AnyCancellable>()
     
     // MARK: - Constructor
@@ -41,6 +41,16 @@ class CardsListViewModel {
                 self?.cards = theCards
             }
             .store(in: &subscriptions)
+    }
+    
+    func sync() {
+        cardsRepository.sync { [weak self] error in
+            if error != nil {
+                print(error!.localizedDescription)
+            } else {
+                self?.fetchAllCards()
+            }
+        }
     }
     
     func cardTapped(at index: Int) {

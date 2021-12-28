@@ -13,7 +13,7 @@ class CardCell: UICollectionViewCell {
     
     private var hierarchyNotReady = true
     
-    var card: Card? {
+    var card: CardDTO? {
         didSet {
             populateData()
         }

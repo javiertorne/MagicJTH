@@ -9,6 +9,7 @@ import Combine
 
 protocol CardsRepository {
     
-    func read() -> AnyPublisher<Cards, Error>
+    func sync(completion: @escaping (Error?) -> Void)
+    func read() -> AnyPublisher<CardsDTO, Error>
     
 }

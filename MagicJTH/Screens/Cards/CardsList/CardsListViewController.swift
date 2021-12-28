@@ -26,6 +26,7 @@ class CardsListViewController: NiblessViewController {
         
         setupNavigationBar()
         viewModel.fetchAllCards()
+        viewModel.sync()
     }
     
     // MARK: - Métodos
