@@ -37,11 +37,13 @@
 		771EFBC5277AEB8900F0316C /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBC4277AEB8900F0316C /* CardDetailViewModel.swift */; };
 		771EFBC7277AEB9000F0316C /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EFBC6277AEB9000F0316C /* CardDetailView.swift */; };
 		771EFBCA277AF4A600F0316C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 771EFBC9277AF4A600F0316C /* SDWebImage */; };
+		77905615277CC80F00199FA8 /* FakeCardsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77905614277CC80F00199FA8 /* FakeCardsRepositoryImpl.swift */; };
+		77905617277CD04A00199FA8 /* FakeErrorsCardsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77905616277CD04A00199FA8 /* FakeErrorsCardsRepositoryImpl.swift */; };
 		77B7E16327789095008BB7FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E16227789095008BB7FA /* AppDelegate.swift */; };
 		77B7E16527789096008BB7FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E16427789096008BB7FA /* SceneDelegate.swift */; };
 		77B7E16C27789096008BB7FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77B7E16B27789096008BB7FA /* Assets.xcassets */; };
 		77B7E16F27789096008BB7FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B7E16D27789096008BB7FA /* LaunchScreen.storyboard */; };
-		77B7E17A27789097008BB7FA /* MagicJTHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E17927789097008BB7FA /* MagicJTHTests.swift */; };
+		77B7E17A27789097008BB7FA /* CardListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E17927789097008BB7FA /* CardListViewModelTests.swift */; };
 		77B7E18427789097008BB7FA /* MagicJTHUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E18327789097008BB7FA /* MagicJTHUITests.swift */; };
 		77B7E18627789097008BB7FA /* MagicJTHUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B7E18527789097008BB7FA /* MagicJTHUITestsLaunchTests.swift */; };
 		77E2C4A4277B0E4A00814EBA /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77E2C4A2277B0E4A00814EBA /* Main.xcdatamodeld */; };
@@ -109,6 +111,8 @@
 		771EFBC2277AEB8100F0316C /* CardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		771EFBC4277AEB8900F0316C /* CardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModel.swift; sourceTree = "<group>"; };
 		771EFBC6277AEB9000F0316C /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		77905614277CC80F00199FA8 /* FakeCardsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCardsRepositoryImpl.swift; sourceTree = "<group>"; };
+		77905616277CD04A00199FA8 /* FakeErrorsCardsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeErrorsCardsRepositoryImpl.swift; sourceTree = "<group>"; };
 		77B7E15F27789095008BB7FA /* MagicJTH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicJTH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B7E16227789095008BB7FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B7E16427789096008BB7FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,7 +120,7 @@
 		77B7E16E27789096008BB7FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77B7E17027789096008BB7FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B7E17527789097008BB7FA /* MagicJTHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicJTHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		77B7E17927789097008BB7FA /* MagicJTHTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicJTHTests.swift; sourceTree = "<group>"; };
+		77B7E17927789097008BB7FA /* CardListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewModelTests.swift; sourceTree = "<group>"; };
 		77B7E17F27789097008BB7FA /* MagicJTHUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicJTHUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B7E18327789097008BB7FA /* MagicJTHUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicJTHUITests.swift; sourceTree = "<group>"; };
 		77B7E18527789097008BB7FA /* MagicJTHUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicJTHUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -318,6 +322,8 @@
 			isa = PBXGroup;
 			children = (
 				771EFBB2277A1FCF00F0316C /* CardsRepositoryImpl.swift */,
+				77905614277CC80F00199FA8 /* FakeCardsRepositoryImpl.swift */,
+				77905616277CD04A00199FA8 /* FakeErrorsCardsRepositoryImpl.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -372,7 +378,7 @@
 		77B7E17827789097008BB7FA /* MagicJTHTests */ = {
 			isa = PBXGroup;
 			children = (
-				77B7E17927789097008BB7FA /* MagicJTHTests.swift */,
+				77B7E17927789097008BB7FA /* CardListViewModelTests.swift */,
 			);
 			path = MagicJTHTests;
 			sourceTree = "<group>";
@@ -585,6 +591,7 @@
 				771EFB822779AE2700F0316C /* WelcomeView.swift in Sources */,
 				77B7E16527789096008BB7FA /* SceneDelegate.swift in Sources */,
 				771EFBA2277A19BE00F0316C /* CardsListViewController.swift in Sources */,
+				77905617277CD04A00199FA8 /* FakeErrorsCardsRepositoryImpl.swift in Sources */,
 				77E2C4C4277B625A00814EBA /* NetworkMonitor.swift in Sources */,
 				771EFB97277A042400F0316C /* Measurement.swift in Sources */,
 				77E2C4B2277B15F700814EBA /* RulingDTO.swift in Sources */,
@@ -592,6 +599,7 @@
 				771EFBB3277A1FCF00F0316C /* CardsRepositoryImpl.swift in Sources */,
 				771EFBC1277A347700F0316C /* NiblessNavigationController.swift in Sources */,
 				77E2C4C2277B5C7100814EBA /* CustomError.swift in Sources */,
+				77905615277CC80F00199FA8 /* FakeCardsRepositoryImpl.swift in Sources */,
 				771EFB842779AE4200F0316C /* NiblessView.swift in Sources */,
 				771EFB7B2779ABD100F0316C /* AppDependencyContainer.swift in Sources */,
 				771EFB7E2779AE1700F0316C /* WelcomeViewController.swift in Sources */,
@@ -606,7 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77B7E17A27789097008BB7FA /* MagicJTHTests.swift in Sources */,
+				77B7E17A27789097008BB7FA /* CardListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
