@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Clase que transforma una clase de tipo LegalityDTO en datos que puede guardar Core Data.
 class LegalityTransformer: ValueTransformer {
     
     override func transformedValue(_ value: Any?) -> Any? {

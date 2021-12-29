@@ -7,7 +7,6 @@
 
 import UIKit
 
-/// Vista de la pantalla de bienvenida
 class WelcomeView: ViewForViewController {
     
     // MARK: - Propiedades

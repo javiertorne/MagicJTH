@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Clase que transforma una clase de tipo ForeignNameDTO en datos que puede guardar Core Data.
 class ForeignNameTransformer: ValueTransformer {
     
     override func transformedValue(_ value: Any?) -> Any? {

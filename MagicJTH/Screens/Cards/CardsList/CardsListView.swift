@@ -54,7 +54,7 @@ class CardsListView: ViewForViewController {
         constructHierarchy()
         anchorViews()
         observeScreenState()
-        setupPeopleCollectionView()
+        setupCardsCollectionView()
         observeCards()
         
         hierarchyNotReady = false
@@ -91,7 +91,7 @@ class CardsListView: ViewForViewController {
         ])
     }
     
-    private func setupPeopleCollectionView() {
+    private func setupCardsCollectionView() {
         cardsCollectionView.delegate = self
         cardsCollectionView.dataSource = self
         cardsCollectionView.register(CardCell.self, forCellWithReuseIdentifier: cardsCellId)

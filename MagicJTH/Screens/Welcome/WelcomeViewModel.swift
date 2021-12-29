@@ -7,7 +7,6 @@
 
 import Foundation
 
-/// View model de la pantalla de bienvenida.
 class WelcomeViewModel {
     
     // MARK: - Propiedades
