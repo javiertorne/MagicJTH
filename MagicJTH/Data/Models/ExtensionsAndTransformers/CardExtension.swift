@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 
+/// Extension con las funciones necesarias para convertir un modelo de carta de Core Data en su DTO y viceversa.
 extension Card {
     
     func mapToCardDTO() -> CardDTO {

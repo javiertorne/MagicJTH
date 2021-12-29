@@ -5,7 +5,6 @@
 //  Created by Javier Torné Hernández on 27/12/21.
 //
 
-/// View controller de la pantalla de bienvenida.
 class WelcomeViewController: NiblessViewController {
     
     // MARK: - Propiedades

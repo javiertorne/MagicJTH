@@ -6,6 +6,9 @@
 //
 
 /// Contenedor principal de inyección de dependencias.
+/// Desde aquí se crean todas las dependencias que necesita la app. Al ser una app de muestra muy pequeña, con tenerlas aquí es suficiente, pero si tuviésemos una app más grande se podría hacer un contenedor para cada funcionalidad.
+/// Por ejemplo, podríamos tener un contenedor para el acceso y registro a la app, otro para el perfil de usuario, etc. Cada uno encargado de proporcionar las dependencias a las pantallas que maneje.
+/// Las cosas que fuesen a ser comunes se pondrían en el contenedor principal, y formaríamos el árbol de contenedores con herencias.
 class AppDependencyContainer {
     
     // MARK: - Propiedades
@@ -31,7 +34,6 @@ class AppDependencyContainer {
     
     // MARK: Main
     
-    /// Creación del view controller que actúa como contenedor principal de vistas.
     func makeMainContainerViewController() -> MainContainerViewController {
         let mainContainerViewModel = sharedMainViewModel
         let welcomeViewController = makeWelcomeViewController()

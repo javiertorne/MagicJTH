@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Clase que transforma una clase de tipo RulingDTO en datos que puede guardar Core Data.
 class RulingTransformer: ValueTransformer {
     
     override func transformedValue(_ value: Any?) -> Any? {

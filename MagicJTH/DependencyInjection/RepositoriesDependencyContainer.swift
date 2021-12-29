@@ -5,6 +5,7 @@
 //  Created by Javier Torné Hernández on 27/12/21.
 //
 
+/// Contenedor donde se crean los repositorios.
 class RepositoriesDependencyContainer {
     
     // MARK: - Cards

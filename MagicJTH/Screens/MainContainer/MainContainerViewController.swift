@@ -8,8 +8,6 @@
 import Combine
 import Dispatch
 
-/// View controller principal que sirve como contenedor para el resto de vistas.
-/// También se encarga de la navegación entre pantallas.
 class MainContainerViewController: NiblessNavigationController {
     
     // MARK: - Propiedades
