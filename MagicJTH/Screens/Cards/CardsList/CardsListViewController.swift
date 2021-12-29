@@ -31,8 +31,9 @@ class CardsListViewController: NiblessViewController {
         
         setupNavigationBar()
         observeErrorMessages()
-        observeState()
-        viewModel.fetchAllCards()
+        viewModel.fetchAllCards { [weak self] in
+            self?.viewModel.sync()
+        }
     }
     
     // MARK: - Métodos
@@ -43,7 +44,7 @@ class CardsListViewController: NiblessViewController {
     
     private func setupNavigationBar() {
         title = "cards_list.title.text".localized()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.clockwise.circle.fill"), style: .plain, target: viewModel, action: #selector(viewModel.sync))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.clockwise.circle.fill"), style: .plain, target: viewModel, action: #selector(viewModel.forceSync))
     }
     
     private func observeErrorMessages() {
@@ -54,36 +55,6 @@ class CardsListViewController: NiblessViewController {
                     self?.present(errorMessage: errorMessage) {
                         self?.viewModel.resetErrorMessage()
                     }
-                }
-            }
-            .store(in: &subscriptions)
-    }
-    
-    private func observeState() {
-        viewModel.$screenState
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] state in
-                guard let strongSelf = self else { return }
-                switch state {
-                case .none:
-                    print("🟢 ESTADO NULO")
-                case .reading:
-                    print("🟢 ESTADO LEYENDO")
-                    print("🔴 MUESTRO CARGANDO")
-                case .read:
-                    print("🟢 ESTADO LEIDO")
-                case .syncing:
-                    print("🟢 ESTADO SINCRONIZANDO")
-                    print("🔴 MUESTRO CARGANDO")
-                case .synchronized:
-                    print("🟢 ESTADO SINCRONIZADO")
-                case .refreshing:
-                    print("🟢 ESTADO REFRESCANDO")
-                case .refreshed:
-                    print("🟢 ESTADO REFRESCADO")
-                }
-                if state == .read {
-                    strongSelf.viewModel.sync()
                 }
             }
             .store(in: &subscriptions)

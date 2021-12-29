@@ -6,10 +6,7 @@
 //
 
 enum CardsListScreenState {
-    case reading
-    case read
+    case notSyncing
     case syncing
-    case synchronized
-    case refreshing
-    case refreshed
+    case forceSyncing
 }

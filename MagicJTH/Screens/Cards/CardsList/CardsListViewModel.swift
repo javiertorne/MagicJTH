@@ -17,7 +17,7 @@ class CardsListViewModel {
     @Published var cards = [CardDTO]()
     private var subscriptions = Set<AnyCancellable>()
     @Published var errorMessage: String?
-    @Published var screenState: CardsListScreenState?
+    @Published var screenState: CardsListScreenState = .notSyncing
     
     // MARK: - Constructor
     
@@ -28,12 +28,10 @@ class CardsListViewModel {
     
     // MARK: - Métodos
     
-    func fetchAllCards() {
-        screenState = screenState == nil ? .reading : .refreshing
+    func fetchAllCards(completion: (() -> Void)? = nil) {
         cardsRepository
             .read()
             .sink { [weak self] completion in
-                self?.screenState = nil
                 switch completion {
                 case .failure(let error):
                     self?.errorMessage = self?.getErrorMessage(error: error)
@@ -42,23 +40,29 @@ class CardsListViewModel {
                     break
                 }
             } receiveValue: { [weak self] cards in
-                self?.screenState = self?.screenState == .refreshing ? .refreshed : .read
                 guard let theCards = cards.cards else { return }
                 self?.cards = theCards
+                guard let completion = completion else {
+                    return
+                }
+                completion()
             }
             .store(in: &subscriptions)
     }
     
-    @objc func sync() {
-        screenState = .syncing
+    @objc func forceSync() {
+        sync(forced: true)
+    }
+    
+    func sync(forced: Bool = false) {
+        screenState = forced ? .forceSyncing : .syncing
         cardsRepository.sync { [weak self] error in
+            self?.screenState = .notSyncing
             if error != nil {
-                self?.screenState = nil
                 if let cards = self?.cards, cards.isEmpty {
                     self?.errorMessage = self?.getErrorMessage(error: error!)
                 }
             } else {
-                self?.screenState = .synchronized
                 self?.fetchAllCards()
             }
         }
