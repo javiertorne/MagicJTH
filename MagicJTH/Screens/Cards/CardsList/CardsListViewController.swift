@@ -31,8 +31,9 @@ class CardsListViewController: NiblessViewController {
         
         setupNavigationBar()
         observeErrorMessages()
-        viewModel.fetchAllCards()
-        viewModel.sync()
+        viewModel.fetchAllCards { [weak self] in
+            self?.viewModel.sync()
+        }
     }
     
     // MARK: - Métodos
@@ -43,7 +44,7 @@ class CardsListViewController: NiblessViewController {
     
     private func setupNavigationBar() {
         title = "cards_list.title.text".localized()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.clockwise.circle.fill"), style: .plain, target: viewModel, action: #selector(viewModel.sync))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.clockwise.circle.fill"), style: .plain, target: viewModel, action: #selector(viewModel.forceSync))
     }
     
     private func observeErrorMessages() {

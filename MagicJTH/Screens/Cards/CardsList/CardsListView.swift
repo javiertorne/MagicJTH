@@ -19,12 +19,19 @@ class CardsListView: ViewForViewController {
     
     // MARK: - Views
     
-    let cardsCollectionView: UICollectionView = {
+    private let cardsCollectionView: UICollectionView = {
         var config = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         let layout = UICollectionViewCompositionalLayout.list(using: config)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
+    }()
+    
+    private let activityIndicatorView: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.hidesWhenStopped = true
+        return activityIndicator
     }()
     
     // MARK: - Constructor
@@ -43,8 +50,10 @@ class CardsListView: ViewForViewController {
             return
         }
         
+        styleView()
         constructHierarchy()
         anchorViews()
+        observeScreenState()
         setupPeopleCollectionView()
         observeCards()
         
@@ -52,19 +61,33 @@ class CardsListView: ViewForViewController {
     }
     
     func styleView() {
+        backgroundColor = .systemBackground
         cardsCollectionView.backgroundColor = .systemBackground
     }
     
     func constructHierarchy() {
         addSubview(cardsCollectionView)
+        addSubview(activityIndicatorView)
     }
     
     func anchorViews() {
+        anchorCollectionView()
+        anchorActivityIndicator()
+    }
+    
+    private func anchorCollectionView() {
         NSLayoutConstraint.activate([
             cardsCollectionView.topAnchor.constraint(equalTo: topAnchor),
             cardsCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
             cardsCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             cardsCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
+    }
+    
+    private func anchorActivityIndicator() {
+        NSLayoutConstraint.activate([
+            activityIndicatorView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            activityIndicatorView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
     
@@ -77,9 +100,35 @@ class CardsListView: ViewForViewController {
     private func observeCards() {
         viewModel.$cards
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] people in
+            .sink { [weak self] _ in
                 self?.cardsCollectionView.reloadData()
             }.store(in: &subscriptions)
+    }
+    
+    private func observeScreenState() {
+        viewModel.$screenState
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] state in
+                switch state {
+                case .notSyncing:
+                    self?.hideActivityIndicator()
+                case .syncing:
+                    self?.viewModel.cards.count == 0 ? self?.showActivityIndicator() : self?.hideActivityIndicator()
+                case .forceSyncing:
+                    self?.showActivityIndicator()
+                }
+            }
+            .store(in: &subscriptions)
+    }
+    
+    private func hideActivityIndicator() {
+        activityIndicatorView.stopAnimating()
+        cardsCollectionView.isHidden = false
+    }
+    
+    private func showActivityIndicator() {
+        activityIndicatorView.startAnimating()
+        cardsCollectionView.isHidden = true
     }
     
 }
