@@ -118,7 +118,7 @@ class CardsListViewModel {
      - Parameter error: Error que ha sucedido en algún momento al intentar leer los datos.
      - Returns: Un texto con el mensaje de error en el idioma en el que el usuario tenga el dispositivo configurado.
      */
-    private func getErrorMessage(error: Error) -> String {
+    func getErrorMessage(error: Error) -> String {
         if error is CustomError {
             switch error as! CustomError {
             case .noInternet:

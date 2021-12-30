@@ -37,7 +37,7 @@ class WelcomeUITests: XCTestCase {
     }
     
     /// Test que prueba que cuando se pulsa el botón de acceder, se muestra la pantalla de lista de cartas
-    func testWelcomeView_whenAccessButtonTapped_showCardListView() {
+    func testWelcomeView_whenAccessButtonTapped_showCardsListView() {
         app.buttons["accessButton"].tap()
         XCTAssertTrue(app.navigationBars["Cartas"].exists, "Debería mostrarse la pantalla de listado de cartas.")
     }

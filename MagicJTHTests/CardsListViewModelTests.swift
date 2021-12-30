@@ -1,5 +1,5 @@
 //
-//  CardListViewModelTests.swift
+//  CardsListViewModelTests.swift
 //  MagicJTHTests
 //
 //  Created by Javier Torné Hernández on 26/12/21.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import MagicJTH
 
-class CardListViewModelTests: XCTestCase {
+class CardsListViewModelTests: XCTestCase {
     
     // MARK: - Propiedades
     
