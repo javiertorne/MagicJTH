@@ -27,16 +27,18 @@ class WelcomeView: ViewForViewController {
     
     private let nameSurnameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Javier Torné Hernández"
+        label.text = "welcome.name_label.text".localized()
         label.textAlignment = .center
         label.font = .preferredFont(forTextStyle: .title1)
+        label.accessibilityIdentifier = "nameSurnameLabel"
         return label
     }()
     
     private let emailLabel: UILabel = {
         let label = UILabel()
-        label.text = "javiertorne88@gmail.com"
+        label.text = "welcome.email_label.text".localized()
         label.textAlignment = .center
+        label.accessibilityIdentifier = "emailLabel"
         return label
     }()
     
@@ -44,6 +46,7 @@ class WelcomeView: ViewForViewController {
         let label = UILabel()
         label.text = "welcome.date_label.text".localized()
         label.textAlignment = .center
+        label.accessibilityIdentifier = "dateLabel"
         return label
     }()
     
@@ -54,6 +57,7 @@ class WelcomeView: ViewForViewController {
         config.baseBackgroundColor = .systemBrown
         button.configuration = config
         button.addTarget(viewModel, action: #selector(viewModel.accessTapped), for: .touchUpInside)
+        button.accessibilityIdentifier = "accessButton"
         return button
     }()
     

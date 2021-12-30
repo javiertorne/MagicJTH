@@ -31,6 +31,7 @@ class CardsListView: ViewForViewController {
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.hidesWhenStopped = true
+        activityIndicator.accessibilityIdentifier = "activityIndicatorView"
         return activityIndicator
     }()
     

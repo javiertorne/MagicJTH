@@ -14,10 +14,10 @@ class CardsListViewModel {
     // MARK: - Propiedades
     
     /// Repositorio de cartas
-    private let cardsRepository: CardsRepository
+    let cardsRepository: CardsRepository
     
     /// Navigator utilizado para la movilidad entre pantallas.
-    private let navigator: Navigator
+    let navigator: Navigator
     
     /// Publisher que expone una colección de cartas.
     @Published var cards = [CardDTO]()
@@ -29,7 +29,7 @@ class CardsListViewModel {
     @Published var screenState: CardsListScreenState = .notSyncing
     
     /// Set de suscripciones de Combine. Se almacenan a nivel de clase para que se liberen cuando el sistema libere de memoria esta clase.
-    private var subscriptions = Set<AnyCancellable>()
+    var subscriptions = Set<AnyCancellable>()
     
     // MARK: - Constructor
     
@@ -118,7 +118,7 @@ class CardsListViewModel {
      - Parameter error: Error que ha sucedido en algún momento al intentar leer los datos.
      - Returns: Un texto con el mensaje de error en el idioma en el que el usuario tenga el dispositivo configurado.
      */
-    private func getErrorMessage(error: Error) -> String {
+    func getErrorMessage(error: Error) -> String {
         if error is CustomError {
             switch error as! CustomError {
             case .noInternet:
