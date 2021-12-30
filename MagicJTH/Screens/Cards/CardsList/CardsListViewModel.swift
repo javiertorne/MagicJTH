@@ -93,8 +93,12 @@ class CardsListViewModel {
         cardsRepository.sync { [weak self] error in
             self?.screenState = .notSyncing
             if error != nil {
-                if let cards = self?.cards, cards.isEmpty {
+                if forced {
                     self?.errorMessage = self?.getErrorMessage(error: error!)
+                } else {
+                    if let cards = self?.cards, cards.isEmpty {
+                        self?.errorMessage = self?.getErrorMessage(error: error!)
+                    }
                 }
             } else {
                 self?.fetchAllCards()
