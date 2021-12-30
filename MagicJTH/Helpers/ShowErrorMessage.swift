@@ -13,7 +13,6 @@ extension UIViewController {
         let errorAlertController = UIAlertController(title: "error.alert.title".localized(),
                                                      message: errorMessage,
                                                      preferredStyle: .alert)
-        //let okAction = UIAlertAction(title: "error.alert.close".localized(), style: .default)
         let okAction = UIAlertAction(title: "error.alert.close".localized(), style: .default) { _ in
             onClose()
         }

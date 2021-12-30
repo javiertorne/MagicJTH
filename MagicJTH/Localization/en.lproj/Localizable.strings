@@ -8,6 +8,8 @@
 
 // MARK: - Welcome
 
+"welcome.name_label.text" = "Javier Torné Hernández";
+"welcome.email_label.text" = "javiertorne88@gmail.com";
 "welcome.date_label.text" = "Test done on 12/27/2021";
 "welcome.access_button.text" = "Access";
 
