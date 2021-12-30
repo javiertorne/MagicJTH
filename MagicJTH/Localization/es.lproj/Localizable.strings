@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  MagicJTH
+
+  Created by Javier Torné Hernández on 27/12/21.
+  
+*/
+
+// MARK: - Welcome
+
+"welcome.name_label.text" = "Javier Torné Hernández";
+"welcome.email_label.text" = "javiertorne88@gmail.com";
+"welcome.date_label.text" = "Prueba realizada el 27/12/2021";
+"welcome.access_button.text" = "Acceder";
+
+// MARK: - Cards list
+
+"cards_list.title.text" = "Cartas";
+
+// MARK: - Errors
+
+"error.unknown" = "Se ha producido un error desconocido. Por favor, inténtalo de nuevo más tarde.";
+"error.no_internet" = "No tienes conexión a internet. Por favor, conéctate y vuelve a intentarlo.";
+"error.other" = "¡Vaya, algo no ha ido bien! Por favor, inténtalo de nuevo más tarde.";
+"error.alert.title" = "Error";
+"error.alert.close" = "Cerrar";
